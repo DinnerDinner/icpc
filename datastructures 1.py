@@ -76,9 +76,32 @@ print("Front element:", front)                 # 'B'
 #----------------
 
 # Hash Table - **LITERALLY JUST A Python Dictionary! It's just the technical term for it.
+'''
+    it gets hashed into a long number, you % it by its length, and take the resulting index as its position in a hidden array, 
+    in that array, the element at that index is a tuple with (key, value) formatting, and from there whenever you call the key, 
+
+    it finds its hash, does the %, takes the resulting remainder as index, and searches the list for said number in the hidden array, 
+    and returns the second value from the tuple (the value part), hence in a list since finding the element at certain index is o(1), 
+    hash tables have a time complexity of o(1)
+'''
+
+
+#exemple; Prompt: Return the first character that appears only once in the string. If none exist, return '_'.
+def first(lst):
+    dct = {}
+
+    for i in lst:
+        dct[i] = dct.get(i, 0) + 1
+
+    for key in dct:
+        if dct[key] == 1:
+            return key
+    return "_"
+
+print(first("leetcode"))
+print(first("aabbccc"))
 
 
 
 
-
-
+# Heaps: special binary tree-based data structure
