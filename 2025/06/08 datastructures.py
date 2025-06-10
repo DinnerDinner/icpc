@@ -82,7 +82,7 @@ print("Front element:", front)                 # 'B'
 
     it finds its hash, does the %, takes the resulting remainder as index, and searches the list for said number in the hidden array, 
     and returns the second value from the tuple (the value part), hence in a list since finding the element at certain index is o(1), 
-    hash tables have a time complexity of o(1)
+    hash tables look-ups have a time complexity of o(1)
 '''
 
 
@@ -102,3 +102,6 @@ print(first("leetcode"))
 print(first("aabbccc"))
 
 
+
+
+# Heaps: special binary tree-based data structure
