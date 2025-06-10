@@ -1,0 +1,66 @@
+Trees:
+
+
+--> need a nested _Node class with element, left pointer, right pointer, parent pointer
+        --> root's parent points None
+        --> left/right of leaves point to None
+
+A tree ADT supports the following methods on a tree T 
+--> T.root(): return the element at the root node. If T is empty, return None (O(1))
+--> T.isRoot(node): return True if node is the root. Else, False (O(1))
+--> T.parent(node): return the parent(element) of node. None if the root 
+--> T.children(node): generate an iteration of the children of node (as an iterator ideally)
+--> T.isLeaf(node): return True if node is leaf, False otherwise
+--> len(T): return number of nodes in the tree Trees
+--> T.isEmpty(): return True if T is empty. False otherwise
+
+in addtion can add methods to computer depth and height of a given node in a tree
+
+--> depth of node k in a tree: number of ancestor of k(until root), excluding k (not constant)
+--> height of node k in a tree: if k is a leaf, height is 0. otherwise, height of k is one more of the maximum of the heights of k's children (not constant)
+
+
+Binary Tree (subclass of Tree):
+T.left(node): return the element of left child of node
+T.right(node): return the element of right child of node
+T.sibling(node):return the sibling(i.e. left/right child) of node
+T.addRoot(e): create a root for an empty tree
+T.addLeft(node, e): add a left child with val 3
+"same for right"
+T.replace(node, e): replace the element sotred at node with val elem
+T.delete(node): delete a node by replacing it with its child (if any). I node has 2 children, an error should occur.
+T.attach(node, T1, T2): attach T1 and T2 as left and right child as subtrees of node
+
+Properties of binary trees:
+
+h + 1 <= n <= 2^h+1 -1
+
+1 <= n(e) <= 2^height
+
+h <= ni <= 2^h -1
+
+log(n+1) -1 <= h <= n-1
+
+If T is a proper/full binary tree 2h + 1 <= n <= 2^h+1 -1
+
+ni = leaf
+
+In a non-empty proper binary tree T, with external node leaves and ni internal nodes, we have ne = ni + 1
+(rest in photo)
+
+Binary Search Tree (BST):
+
+--> extend a BinaryTree
+--> insert a node into the BST
+--> remove a node from the BST (replace with successor in inorder and then erase leaf)
+--> search for an element value in BST
+--> find the min value in BST
+--> find the max in BST
+--> inorder traversal of BST (should give a sorted list)
+
+AVL Trees(Binary search trees balanced where the height of tree is logarythmic):
+--> extends BST
+--> height is limited to O(log(n))
+--> balancing takes log time
+
+
