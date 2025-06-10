@@ -102,6 +102,3 @@ print(first("leetcode"))
 print(first("aabbccc"))
 
 
-
-
-# Heaps: special binary tree-based data structure
