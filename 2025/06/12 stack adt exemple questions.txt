@@ -1,0 +1,24 @@
+Stack ADT:
+
+S.push(e)
+S.pop()
+S.top()
+S.isEmpty()
+len(S)
+
+Example 1: 
+Overwrite a given file with its contents line-by-line reversed using a stack. 
+
+Example 2: 
+Using a stack check if a given arithmetic expression has matching parenthese.  You may assume the expression only has: 
+--> ( and )
+--> { and }
+--> [ and ]
+
+Example 3:
+Use a stack to match tags in a markup language such as html.  Check if a given html file has matching tags.  A simple opening html tag has the form <name> and the corresponding closing tag has the form </name>.  Commonly used html tags are:
+--> body: document body
+--> h1: section header
+--> center: center justify
+--> p: paragraph
+--> li: list item

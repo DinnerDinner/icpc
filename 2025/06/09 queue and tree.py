@@ -1,49 +1,7 @@
 class Empty(Exception):
     pass
 
-'''Priority Queue:
 
-P.add(k,v): insert item with key k and value v into priority queue Priority
-P.min(): return tuple (k,v) where v is min overall
-P.removeMin(): remove and return tuple (k,v) with minimum priority
-P.isEmpty(): return True if P is empty, False otherwise
-
-Heaps(best underlying structure for P queues):
---> complete binary tree (filled binary tree)
---> each internal node has value smaller than its children 
-
---> array implementation
-methods:
---> _parent(j): parent of j
---> left(j): left child of j (2*j+1)
---> right(j): right child of j (2*j+2)
---> hasLeft(j): true if j has a left child 
---> hasRight(j):true if j has a right child
---> swap(i,j): swap i and j(during heapification)
---> upheap(j): heapify toward the root from j (private)
---> downheap(j): heapify from j to a leaf
---> len(H): number of elements in heap h
---> add(k, v): add key value pair into the heap h
---> min(): min element value in h
---> removeMin(): remove min key in H(i.e. the root of heap) 
-and return corresponding values(using upheap or downheap)'''
-
-
-
-'''Example2: implement a queue based  on a circular array 
-(do i need to pointers)
-Example1: implement a queue based a fixed size array and then 
-give the choice to extend the size (also taking a second argument 
-desired size)
-Example3: implement a queue based in a stack(2 stacks)
-Example4: implement a double ended queue (from both ends you can 
-dequeue and enqueue)
-
---> D.addFirst(e): add element e to the fornt of dequeue
---> D.addLast(e): add element e to the end of dequeue
---> D.deleteFirst(): remove and return first element of deleteFirst
---> D.deleteLast(): remove and return last element of deleteFirst
---> rest of similar methods'''
 
 
 class QueueList:
@@ -133,7 +91,7 @@ class LinkedQueue:
         return answer
     
     def enqueue(self):
-        new_node = self._Node(element, None)
+        new_node = self._Node(elem, None)
         if self.isEmpty():
             self._head = new_node
         else:
